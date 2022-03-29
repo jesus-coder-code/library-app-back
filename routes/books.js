@@ -9,6 +9,7 @@ const {
 
 books.get("/", getBook);
 
+//del modulo books.controller la ruta la manejará la funcion createBook
 books.post("/", createBook);
 
 books.put("/", updateBook);

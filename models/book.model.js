@@ -7,17 +7,14 @@ module.exports = (sequelize, type) => {
     },
     name: {
       type: type.STRING,
-      allowNull: false,
     },
     author: {
       type: type.STRING,
-      allowNull: false,
     },
-    year_publication: type.INTEGER,
-    pages: type.INTEGER,
+    year: type.STRING,
+    pages: type.STRING,
     condition: {
       type: type.STRING,
-      allowNull: false,
     },
   });
 };

@@ -8,7 +8,7 @@ const sequelize = new Sequelize("jesus_api_library", "jesus", "51246380", {
 
 const Book = bookModel(sequelize, Sequelize);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   console.log("conectado");
 });
 
