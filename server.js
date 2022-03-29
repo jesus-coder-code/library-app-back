@@ -2,6 +2,8 @@ const express = require("express");
 const books = require("./routes/books");
 const port = process.env.PORT || 5000;
 
+require("./db/database");
+
 const app = express();
 
 app.get("/", (req, res) => {

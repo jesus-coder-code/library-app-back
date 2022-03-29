@@ -1,6 +1,14 @@
 {
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "dependencies": {
     "express": "^4.17.3",
+    "express-myconnection": "^1.0.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
