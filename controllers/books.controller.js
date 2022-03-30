@@ -6,8 +6,12 @@ const getBook = async (req, res) => {
 };
 
 const createBook = async (req, res) => {
-  await Book.create(req.body);
-  res.json({ message: "libro registrado" });
+  try {
+    await Book.create(req.body);
+    res.json({ message: "libro registrado" });
+  } catch (error) {
+    res.json({ message: error });
+  }
 };
 
 const updateBook = (req, res) => {

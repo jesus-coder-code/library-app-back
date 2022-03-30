@@ -6,6 +6,8 @@ require("./db/database");
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send({ message: "api de biblioteca-libreria" });
 });
