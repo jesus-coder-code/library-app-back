@@ -5,7 +5,7 @@ const getBook = async (req, res) => {
   res.json(book);
 };
 
-/*const getBookName = async (req, res) => {
+const getBookName = async (req, res) => {
   try {
     const book_name = await Book.findAll({ where: { name: req.params.name } });
     res.json(book_name);
@@ -23,7 +23,7 @@ const getBookAuthor = async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-};*/
+};
 
 const createBook = async (req, res) => {
   try {
@@ -45,8 +45,8 @@ const updateBook = async (req, res) => {
 
 module.exports = {
   getBook,
-  /*getBookName,
-  getBookAuthor,*/
+  getBookName,
+  getBookAuthor,
   createBook,
   updateBook,
 };

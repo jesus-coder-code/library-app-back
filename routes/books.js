@@ -10,8 +10,8 @@ const {
 } = require("../controllers/books.controller");
 
 books.get("/get", getBook);
-//books.get("/get/:name", getBookName);
-//books.get("/get/:author", getBookAuthor);
+books.get("/get/:name", getBookName);
+books.get("/get/:author", getBookAuthor);
 
 //del modulo books.controller la ruta la manejará la funcion createBook
 books.post("/new", validateBook, createBook);
