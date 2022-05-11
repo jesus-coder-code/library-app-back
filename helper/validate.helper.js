@@ -5,8 +5,9 @@ const validateResult = (req, res, next) => {
     validationResult(req).throw();
     return next();
   } catch (error) {
-    res.status(403);
+    res.status(422);
     res.json({ message: error.array() });
+    console.log(error);
   }
 };
 
