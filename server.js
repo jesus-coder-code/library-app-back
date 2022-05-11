@@ -1,5 +1,6 @@
 const express = require("express");
 const books = require("./routes/books");
+const users = require("./routes/users");
 const port = process.env.PORT || 5000;
 
 require("./db/database");
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/books", books);
+app.use("/users", users);
 
 app.listen(port, () => {
   console.log("server is running on port:", port);

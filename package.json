@@ -3,6 +3,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.3",
     "express-myconnection": "^1.0.4",
     "express-validator": "^6.14.0",

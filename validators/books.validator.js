@@ -9,8 +9,8 @@ const validateBook = [
   check("year", "solo se permiten numeros").isNumeric(),
   check("pages", "solo se permiten numeros").isNumeric(),
   check("condition", "por favor indique el estado del libro").not().isEmpty(),
-  (req, res, result) => {
-    validateResult(req, res, result);
+  (req, res, next) => {
+    validateResult(req, res, next);
   },
 ];
 
