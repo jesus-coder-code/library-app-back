@@ -8,15 +8,16 @@ const {
   getBookName,
   getBookAuthor,
 } = require("../controllers/books.controller");
+const { checkToken } = require("../jwt/checkToken");
 
 books.get("/get", getBook);
 books.get("/get/:name", getBookName);
 books.get("/get/:author", getBookAuthor);
 
 //del modulo books.controller la ruta la manejará la funcion createBook
-books.post("/new", validateBook, createBook);
+books.post("/new", checkToken, validateBook, createBook);
 
-books.put("/update/:id", validateBook, updateBook);
+books.put("/update/:id", checkToken, validateBook, updateBook);
 
 books.delete("/", (req, res) => {
   res.send({ message: "aqui elimino los libros" });
