@@ -1,6 +1,6 @@
 const express = require("express");
 const books = express.Router();
-const { validateBook } = require("../validators/books.validator");
+const { validateBook } = require("../middlewares/validators/books.validator");
 const {
   getBook,
   createBook,
@@ -8,7 +8,7 @@ const {
   getBookName,
   getBookAuthor,
 } = require("../controllers/books.controller");
-const { checkToken } = require("../jwt/checkToken");
+const { checkToken } = require("../middlewares/jwt/checkToken");
 
 books.get("/get", getBook);
 books.get("/get/:name", getBookName);

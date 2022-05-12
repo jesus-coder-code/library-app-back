@@ -2,7 +2,7 @@ const { User } = require("../db/database");
 const bcrypt = require("bcryptjs");
 //const moment = require("moment");
 //const jwt = require("jwt-simple");
-const { generateToken } = require("../jwt/generateToken");
+const { generateToken } = require("../middlewares/jwt/generateToken");
 
 const createUser = async (req, res) => {
   try {
